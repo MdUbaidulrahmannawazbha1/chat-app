@@ -109,3 +109,21 @@ Update the model name in the chatbot code:
 ```python
 self.ai_model = "phi3:mini"  # Change this line
 ```
+
+## Customize How The Bot Sounds
+
+You can change the chatbot personality/tone by setting a custom system prompt.
+
+```python
+from chatbot import Chat
+
+chat = Chat(ai_system_prompt="You are witty, casual, and brief. Use simple words and friendly humor.")
+print(chat.ai_converse("Tell me about Python"))
+```
+
+You can also update it later at runtime:
+
+```python
+chat.set_ai_persona("You are professional and formal. Keep responses short and practical.")
+chat.reset_ai_persona()  # Back to default tone
+```

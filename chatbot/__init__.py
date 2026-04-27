@@ -122,7 +122,8 @@ class Topic:
 
 class Chat(object):
     def __init__(self, pairs=(), reflections=None, call=_function_call,
-                 api=None, normalizer=None, default_template=None, language="en", local_path=None):
+                 api=None, normalizer=None, default_template=None, language="en", local_path=None,
+                 ai_system_prompt=None):
         """
         Initialize the chatbot.  Pairs is a list of patterns and responses.  Each
         pattern is a regular expression matching the user's statement or question,
@@ -174,28 +175,44 @@ class Chat(object):
         self.call = call
         self._topic = Topic(self._pairs.keys)
         self._api = self.__process_api(api)
-        self.__init_ai()
+        self.__init_ai(ai_system_prompt)
         
         # Initialize grammar corrector
         self.grammar_corrector = GrammarCorrector()
 
-    def __init_ai(self):
+    def __init_ai(self, ai_system_prompt=None):
         # Ollama integration
         self.original_ai_model = "llama3.2:1b"
         self.ai_model = self.original_ai_model
         self.learned_responses = {}  # Store specific learned responses
         self._custom_model = None  # Track created custom model for cleanup
         self._training_contexts = []  # Accumulate training data
+        self.default_ai_system_prompt = (
+            "You are ChatBot, a concise and upbeat assistant. "
+            "Respond in a friendly, natural tone with clear and direct language."
+        )
+        self.ai_system_prompt = ai_system_prompt or self.default_ai_system_prompt
         
     def _call_ollama(self, message):
         """Call Ollama API using Python client"""
         try:
             response = ollama.chat(model=self.ai_model, messages=[
+                {'role': 'system', 'content': self.ai_system_prompt},
                 {'role': 'user', 'content': message}
             ])
             return response['message']['content']
         except Exception as e:
             return f"Ollama error: {str(e)}. Please see OLLAMA_SETUP.md for installation instructions."
+
+    def set_ai_persona(self, system_prompt):
+        """Set a custom system prompt to control response style/tone."""
+        if not isinstance(system_prompt, str) or not system_prompt.strip():
+            raise ValueError("system_prompt must be a non-empty string")
+        self.ai_system_prompt = system_prompt.strip()
+
+    def reset_ai_persona(self):
+        """Reset AI persona back to the default system prompt."""
+        self.ai_system_prompt = self.default_ai_system_prompt
 
     def ai_converse(self, message):
         """Generate response using Ollama"""
@@ -232,7 +249,10 @@ class Chat(object):
                 custom_model_name = f"{self.original_ai_model}-custom"
                 print(f"Creating custom model: {custom_model_name}...", flush=True)
                 
-                system_prompt = f"You are a helpful assistant trained on custom data. Training context: {training_text}"
+                system_prompt = (
+                    f"{self.ai_system_prompt}\n\n"
+                    f"Training context: {training_text}"
+                )
                 ollama.create(
                     model=custom_model_name,
                     from_=self.original_ai_model,
@@ -246,7 +266,10 @@ class Chat(object):
                 next_model_name = f"{self._custom_model}-v{len(self._training_contexts) + 1}"
                 print(f"Incremental training: creating {next_model_name}...", flush=True)
                 
-                system_prompt = f"You are a helpful assistant with additional training. New training context: {training_text}"
+                system_prompt = (
+                    f"{self.ai_system_prompt}\n\n"
+                    f"Additional training context: {training_text}"
+                )
                 ollama.create(
                     model=next_model_name,
                     from_=self._custom_model,  # Build on previous custom model
@@ -283,7 +306,10 @@ class Chat(object):
         try:
             print(f"Creating learned response model: {learn_model_name}...", flush=True)
             
-            system_prompt = f"You are a helpful assistant. You have learned this specific knowledge: {training_data}"
+            system_prompt = (
+                f"{self.ai_system_prompt}\n\n"
+                f"You have learned this specific knowledge: {training_data}"
+            )
             ollama.create(
                 model=learn_model_name,
                 from_=base_model,

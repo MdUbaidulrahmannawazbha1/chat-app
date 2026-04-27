@@ -15,7 +15,7 @@
 - [x] Multiple previous message Ragex per intend block support 
 - [x] Language switch support (localization)
 - [x] Desktop UI
-- [x] [Web UI](https://github.com/ahmadfaizalbh/WebBot)
+- [x] [Web UI](https://github.com/MdUbaidulrahmannawazbha1/WebBot)
 - [ ] Rich Text Respose Support in template
 - [ ] Response Card Support in templates
 - [ ] Support Image and Vidio in response 

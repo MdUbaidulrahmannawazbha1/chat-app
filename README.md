@@ -1,7 +1,7 @@
 [![Downloads](https://static.pepy.tech/badge/chatbotai)](https://pepy.tech/project/chatbotai)
 [![PyPI version](https://badge.fury.io/py/chatbotAI.svg)](https://badge.fury.io/py/chatbotAI)
-![Upload Python Package](https://github.com/ahmadfaizalbh/Chatbot/workflows/Upload%20Python%20Package/badge.svg)
-[![CodeQL](https://github.com/ahmadfaizalbh/Chatbot/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/ahmadfaizalbh/Chatbot/actions/workflows/codeql-analysis.yml)
+![Upload Python Package](https://github.com/MdUbaidulrahmannawazbha1/chat-app/workflows/Upload%20Python%20Package/badge.svg)
+[![CodeQL](https://github.com/MdUbaidulrahmannawazbha1/chat-app/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/MdUbaidulrahmannawazbha1/chat-app/actions/workflows/codeql-analysis.yml)
 
 # ChatBotAI
 Python chatbot AI that helps in creating a python based chatbot with
@@ -19,11 +19,11 @@ Now supports **Ollama with Llama 3.2** for state-of-the-art AI responses!
 - See `OLLAMA_SETUP.md` for installation instructions
 
 
-![Demo GUI](https://raw.githubusercontent.com/ahmadfaizalbh/Chatbot/master/images/demo_gui.gif)
+![Demo GUI](https://raw.githubusercontent.com/MdUbaidulrahmannawazbha1/chat-app/master/images/demo_gui.gif)
 
-![Demo](https://raw.githubusercontent.com/ahmadfaizalbh/Chatbot/master/images/demo.gif)
-![Clothing assistance](https://raw.githubusercontent.com/ahmadfaizalbh/Chatbot/master/images/clothing.gif)
-![Reminder](https://raw.githubusercontent.com/ahmadfaizalbh/Chatbot/master/images/reminder.gif)
+![Demo](https://raw.githubusercontent.com/MdUbaidulrahmannawazbha1/chat-app/master/images/demo.gif)
+![Clothing assistance](https://raw.githubusercontent.com/MdUbaidulrahmannawazbha1/chat-app/master/images/clothing.gif)
+![Reminder](https://raw.githubusercontent.com/MdUbaidulrahmannawazbha1/chat-app/master/images/reminder.gif)
 
 ## Installation
 
@@ -36,8 +36,8 @@ pip install chatbotAI
 ### Install from GitHub (Source)
 1. Clone the repository:
 ```sh
-git clone https://github.com/ahmadfaizalbh/Chatbot.git
-cd Chatbot
+git clone https://github.com/MdUbaidulrahmannawazbha1/chat-app.git
+cd chat-app
 ```
 2. Install dependencies:
 ```sh
@@ -83,13 +83,13 @@ first_question="Hi, how are you?"
 Chat("examples/Example.template").converse(first_question)
 ```
 
-For Detail on how to build Facebook messenger bot checkout  [Facebook Integration.ipynb](https://github.com/ahmadfaizalbh/Meetup-Resources/blob/master/Facebook%20Integration.ipynb)
+For Detail on how to build Facebook messenger bot checkout  [Facebook Integration.ipynb](https://github.com/MdUbaidulrahmannawazbha1/Meetup-Resources/blob/master/Facebook%20Integration.ipynb)
 
-For Jupyter notebook Chatbot checkout [Infobot built using NLTK-Chatbot](https://github.com/ahmadfaizalbh/Meetup-Resources/blob/master/How%20to%20build%20a%20bot.ipynb)
+For Jupyter notebook Chatbot checkout [Infobot built using NLTK-Chatbot](https://github.com/MdUbaidulrahmannawazbha1/Meetup-Resources/blob/master/How%20to%20build%20a%20bot.ipynb)
 
 #### Sample Apps
-1. A sample facebook messenger bot built using [messengerbot](https://github.com/geeknam/messengerbot/pulls), [Django](https://github.com/django/django) and [NLTK-Chatbot](#chatbot) is available here [Facebook messenger bot](https://github.com/ahmadfaizalbh/FacebookMessengerBot/)
-2. A sample microsoft bot built using [Microsoft Bot Connector Rest API - v3.0](https://docs.botframework.com/en-us/restapi/connector/#navtitle), [Django](https://github.com/django/django) and [NLTK-Chatbot](#chatbot) is available here [Microsoft Chatbot](https://github.com/ahmadfaizalbh/Microsoft-chatbot/)
+1. A sample facebook messenger bot built using [messengerbot](https://github.com/geeknam/messengerbot/pulls), [Django](https://github.com/django/django) and [NLTK-Chatbot](#chatbot) is available here [Facebook messenger bot](https://github.com/MdUbaidulrahmannawazbha1/FacebookMessengerBot/)
+2. A sample microsoft bot built using [Microsoft Bot Connector Rest API - v3.0](https://docs.botframework.com/en-us/restapi/connector/#navtitle), [Django](https://github.com/django/django) and [NLTK-Chatbot](#chatbot) is available here [Microsoft Chatbot](https://github.com/MdUbaidulrahmannawazbha1/Microsoft-chatbot/)
 
 ## List of feature supported in bot template
 1. [Memory](#memory)
@@ -329,7 +329,7 @@ The AI integration is automatic. If a user query does not match any defined temp
 
 ---
 
-![Chatbot AI flow Diagram](https://raw.githubusercontent.com/ahmadfaizalbh/Chatbot/master/images/ChatBot%20AI.png)-0.txt", epochs=10)
+![Chatbot AI flow Diagram](https://raw.githubusercontent.com/MdUbaidulrahmannawazbha1/chat-app/master/images/ChatBot%20AI.png)-0.txt", epochs=10)
 ```
 
 #### Self-Learning
@@ -346,5 +346,5 @@ The AI integration is automatic. If a user query does not match any defined temp
 
 ---
 
-![Chatbot AI flow Diagram](https://raw.githubusercontent.com/ahmadfaizalbh/Chatbot/master/images/ChatBot%20AI.png)
+![Chatbot AI flow Diagram](https://raw.githubusercontent.com/MdUbaidulrahmannawazbha1/chat-app/master/images/ChatBot%20AI.png)
 

@@ -9,8 +9,7 @@ answered as quickly as we can.
 
 ## Contribution Licensing
 
-Since `chatbot` is distributed under the terms of the [MIT License](LICENSE), contributions that you make
-are licensed under the same terms. 
+By contributing to `chatbot`, you agree that your contributions can be used as part of this project.
 All the codes submitted by any contributer and accepted will be collectively owned by to comunity.
 All contributers should make sure the code they submist should be pythonic and self explanatory.
 

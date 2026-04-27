@@ -7,9 +7,9 @@ numerous features like learn, memory, conditional switch, topic-based
 conversation handling, etc.
 <!--- {% raw %} -->
 
-![Demo](https://raw.githubusercontent.com/ahmadfaizalbh/Chatbot/master/images/demo.gif)
-![Clothing assistance](https://raw.githubusercontent.com/ahmadfaizalbh/Chatbot/master/images/clothing.gif)
-![Remainder](https://raw.githubusercontent.com/ahmadfaizalbh/Chatbot/master/images/reminder.gif)
+![Demo](https://raw.githubusercontent.com/MdUbaidulrahmannawazbha1/chat-app/master/images/demo.gif)
+![Clothing assistance](https://raw.githubusercontent.com/MdUbaidulrahmannawazbha1/chat-app/master/images/clothing.gif)
+![Remainder](https://raw.githubusercontent.com/MdUbaidulrahmannawazbha1/chat-app/master/images/reminder.gif)
 
 ## Installation
 
@@ -20,8 +20,8 @@ pip install chatbotAI
 
 install from github:
 ```sh
-git clone https://github.com/ahmadfaizalbh/Chatbot.git
-cd Chatbot
+git clone https://github.com/MdUbaidulrahmannawazbha1/chat-app.git
+cd chat-app
 python setup.py install
 ```
 
@@ -60,13 +60,13 @@ first_question="Hi, how are you?"
 Chat("examples/Example.template").converse(first_question)
 ```
 
-For Detail on how to build Facebook messenger bot checkout  [Facebook Integration.ipynb](https://github.com/ahmadfaizalbh/Meetup-Resources/blob/master/Facebook%20Integration.ipynb)
+For Detail on how to build Facebook messenger bot checkout  [Facebook Integration.ipynb](https://github.com/MdUbaidulrahmannawazbha1/Meetup-Resources/blob/master/Facebook%20Integration.ipynb)
 
-For Jupyter notebook Chatbot checkout [Infobot built using NLTK-Chatbot](https://github.com/ahmadfaizalbh/Meetup-Resources/blob/master/How%20to%20build%20a%20bot.ipynb)
+For Jupyter notebook Chatbot checkout [Infobot built using NLTK-Chatbot](https://github.com/MdUbaidulrahmannawazbha1/Meetup-Resources/blob/master/How%20to%20build%20a%20bot.ipynb)
 
 #### Sample Apps
-1. A sample facebook messenger bot built using [messengerbot](https://github.com/geeknam/messengerbot/pulls), [Django](https://github.com/django/django) and [NLTK-Chatbot](#chatbot) is available here [Facebook messenger bot](https://github.com/ahmadfaizalbh/FacebookMessengerBot/)
-2. A sample microsoft bot built using [Microsoft Bot Connector Rest API - v3.0](https://docs.botframework.com/en-us/restapi/connector/#navtitle), [Django](https://github.com/django/django) and [NLTK-Chatbot](#chatbot) is available here [Micosoft Chatbot](https://github.com/ahmadfaizalbh/Microsoft-chatbot/)
+1. A sample facebook messenger bot built using [messengerbot](https://github.com/geeknam/messengerbot/pulls), [Django](https://github.com/django/django) and [NLTK-Chatbot](#chatbot) is available here [Facebook messenger bot](https://github.com/MdUbaidulrahmannawazbha1/FacebookMessengerBot/)
+2. A sample microsoft bot built using [Microsoft Bot Connector Rest API - v3.0](https://docs.botframework.com/en-us/restapi/connector/#navtitle), [Django](https://github.com/django/django) and [NLTK-Chatbot](#chatbot) is available here [Micosoft Chatbot](https://github.com/MdUbaidulrahmannawazbha1/Microsoft-chatbot/)
 
 ## List of feature supported in bot template
 1. [Memory](#memory)
@@ -252,6 +252,6 @@ you can have any number of key value pair and all key value pair will override d
 ```
 
 
-![Chatbot AI flow Diagram](https://raw.githubusercontent.com/ahmadfaizalbh/Chatbot/master/images/ChatBot%20AI.png)
+![Chatbot AI flow Diagram](https://raw.githubusercontent.com/MdUbaidulrahmannawazbha1/chat-app/master/images/ChatBot%20AI.png)
 
 <!--- {% endraw %} -->
