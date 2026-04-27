@@ -4,36 +4,39 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   return (
     <div className="home-container">
+      <div className="home-orb orb-one" />
+      <div className="home-orb orb-two" />
       <div className="home-content">
-        <h1>Welcome to Real-Time Chat</h1>
-        <p>Connect with friends and family instantly</p>
+        <span className="eyebrow">Personal chatbot starter</span>
+        <h1>NawazBot turns this repo into your own chatbot version.</h1>
+        <p>
+          This build keeps the app self-contained, branded, and easy to customize.
+          You can rename the bot, change the theme, and swap in a real AI later.
+        </p>
         
         <div className="home-features">
-          <div className="feature">
-            <span className="feature-icon">💬</span>
-            <h3>Instant Messaging</h3>
-            <p>Send and receive messages in real-time</p>
+          <div className="feature-card">
+            <span className="feature-icon">01</span>
+            <h3>Custom personality</h3>
+            <p>Change the welcome text, quick prompts, and response style.</p>
           </div>
           
-          <div className="feature">
-            <span className="feature-icon">👥</span>
-            <h3>Online Status</h3>
-            <p>See who's online and available to chat</p>
+          <div className="feature-card">
+            <span className="feature-icon">02</span>
+            <h3>Simple backend</h3>
+            <p>Replies come from a lightweight API that works out of the box.</p>
           </div>
           
-          <div className="feature">
-            <span className="feature-icon">✓</span>
-            <h3>Read Receipts</h3>
-            <p>Know when your messages are read</p>
+          <div className="feature-card">
+            <span className="feature-icon">03</span>
+            <h3>Saved conversation</h3>
+            <p>Your chat history stays in the browser so you can keep iterating.</p>
           </div>
         </div>
 
         <div className="home-actions">
-          <Link to="/login" className="btn-primary">
-            Login
-          </Link>
-          <Link to="/signup" className="btn-secondary">
-            Sign Up
+          <Link to="/chat" className="btn-primary">
+            Open chatbot
           </Link>
         </div>
       </div>

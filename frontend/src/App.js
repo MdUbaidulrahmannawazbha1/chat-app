@@ -3,31 +3,19 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import { ChatProvider } from './context/ChatContext';
 import Home from './pages/Home';
 import Chat from './pages/Chat';
-import Login from './components/Login';
-import Signup from './components/Signup';
 import './styles/chat.css';
 
 function App() {
-  const user = JSON.parse(localStorage.getItem('userInfo'));
-
   return (
     <ChatProvider>
       <Router>
-        <div className="App">
+        <div className="app-shell">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route 
-              path="/login" 
-              element={user ? <Navigate to="/chat" /> : <Login />} 
-            />
-            <Route 
-              path="/signup" 
-              element={user ? <Navigate to="/chat" /> : <Signup />} 
-            />
-            <Route 
-              path="/chat" 
-              element={user ? <Chat /> : <Navigate to="/login" />} 
-            />
+            <Route path="/chat" element={<Chat />} />
+            <Route path="/login" element={<Navigate to="/chat" replace />} />
+            <Route path="/signup" element={<Navigate to="/chat" replace />} />
+            <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
         </div>
       </Router>
